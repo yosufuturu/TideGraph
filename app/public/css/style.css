@@ -1,0 +1,314 @@
+:root {
+    --graph-bg-color: #2f3136;
+    --graph-line-color: #f9f9ff;
+    --graph-wave-line-color: #05ff05;
+    --graph-JCG-line-color: #f17efb;
+    --graph-hieght: 800px;
+    --graph-width: 600px;
+}
+
+html {
+    background-color: var(--graph-bg-color);
+}
+
+body {
+    color: #f9f9ff;
+}
+
+.headline {
+    /* text-align: center;
+    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'ヒラギノ角ゴ Pro W3',
+                 'Hiragino Kaku Gothic Pro','メイリオ',
+                 'Meiryo', '游ゴシック', 'Yu Gothic',
+                 'ＭＳ Ｐゴシック',
+                 'MS PGothic',
+                  sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    width: 72%;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.Summary {
+    display:  grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0px;
+    width: 300px;
+}
+
+.Summary-item {
+    font-size: 18px;
+    display: grid;
+    place-content: center;
+
+}
+
+.bottomline {
+    border-bottom: 1px solid;
+    /* background: green; */
+}
+
+/* SVG CSS */
+
+.main {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input {
+    display: flex;
+    width:600px;
+    justify-content: space-between;
+}
+.param_start {
+    height: 48px;
+    width: 200px;
+    font-size: 28px;
+    color: var(--graph-line-color);
+    border-radius: 8px 8px;
+    border-color: #383a40;
+    background-color: #383a40;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bg {
+    fill: var(--graph-bg-color);
+    height: var(--graph-hieght);
+    width: var(--graph-width);
+}
+.graph-frame {
+    stroke: var(--graph-line-color);
+    stroke-width: 2;
+}
+
+.text-color {
+    fill: var(--graph-line-color);
+    font-family: Franklin Gothic;
+    font-size: 14px;
+}
+
+.JMA-line {
+    stroke: var(--graph-wave-line-color);
+    stroke-width: 1;
+}
+.JCG-line {
+    stroke: var(--graph-JCG-line-color);
+    stroke-width: 1;
+}
+.JMA-line-example {
+    stroke: var(--graph-wave-line-color);
+    fill: none;
+    stroke-width: 2;
+}
+.JCG-line-example {
+    stroke: var(--graph-JCG-line-color);
+    stroke-width: 2;
+}
+.JMA-peak-tide {
+    fill: #1effff;
+}
+.auxiliary-line {
+    stroke-dasharray: 2;
+    stroke: #787a7e;
+}
+.west-commutation, .west-line-example {
+    /* stroke: #ee4246; */
+    stroke: #f1fb7e;
+    stroke-width: 1.5;
+}
+
+.east-commutation, .east-line-example {
+    stroke: #7e8dfb;
+    stroke-width: 1.5;
+
+}
+
+.sun-line {
+    stroke: RGB(221,139,71);
+    stroke-width: 2;
+}
+.sun-line-icon {
+    stroke: RGB(221,139,71);
+}
+.sun-time {
+    fill: RGB(221,139,71);
+}
+
+.calendar-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.tidename {
+    display: inline;
+}
+table{
+    border-collapse: collapse;
+}
+
+th, td {
+    font-family: 'ヒラギノ角ゴ Pro W3',
+    'Hiragino Kaku Gothic Pro','メイリオ',
+    'Meiryo', '游ゴシック', 'Yu Gothic',
+    'ＭＳ Ｐゴシック',
+    'MS PGothic',
+     sans-serif;
+    height: 30px;
+    font-weight: 100;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+tr {
+    height: 10px;
+}
+
+.fontset {
+    font-family: 'ヒラギノ角ゴ Pro W3',
+    'Hiragino Kaku Gothic Pro','メイリオ',
+    'Meiryo', '游ゴシック', 'Yu Gothic',
+    'ＭＳ Ｐゴシック',
+    'MS PGothic',
+     sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+
+.men {
+    width: 600px;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.date-text {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.before-date, .today, .next-date {
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid;
+}
+.before-date, .next-date {
+    width: 20%;
+    background: RGB(30,30,30);
+    cursor: pointer;
+}
+.today {
+    width: 60%;
+    border-bottom: none;
+    
+}
+
+
+.note {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+@media only screen and (max-width: 1080px){
+    :root {
+        --graph-width: 600px;
+    }
+
+    body {
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+    }
+    .title {
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        font-size: 16px;
+    }
+
+   .title-text {
+        text-align: center;
+   }
+
+   .input {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   .date-text {
+        /* width: 600px; */
+        /* height: inherit; */
+        /* display: grid; */
+        /* grid-template-columns: 5fr 1fr 5fr; */
+   }
+
+   .container {
+    width: 96%;
+   }
+
+    .before-date, .today, .next-date {
+        font-size: 18px;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        /* text-align: center; */
+        border-radius: 8px 8px 0 0;
+        border: 1px solid;
+        /* height: 150px; */
+    }
+    .tidename {
+        display: block;
+        margin : 0;
+    }
+        
+
+    .date-text {
+        width: 96%;
+        font-size: 16px;
+    }
+    
+
+    .Summary {
+        display:  grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0px;
+        width: 300px;
+    }
+    
+    .Summary-item {
+        font-size: 18px;
+        display: grid;
+        place-content: center;
+    
+    }
+    .men {
+        width: 100%;
+    }
+}

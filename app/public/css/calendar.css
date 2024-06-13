@@ -1,0 +1,101 @@
+/** cal.css */
+
+:root {
+    --graph-bg-color: #2f3136;
+    --graph-line-color: #f9f9ff;
+}
+
+td div {
+    text-decoration: none;
+    display: block;
+    padding : 15px 15px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+th, td{
+    border: 1px solid var(--graph-line-color);
+    width: 14%;
+    text-align: center;
+}
+th{
+    padding : 15px 15px;
+}
+td {
+    color: var(--graph-bg-color);
+    background-color: var(--graph-line-color);
+}
+td:first-child div {
+    color: red;
+}
+td:first-child div.disabled {
+    color: salmon;
+}
+
+td:last-child div {
+    color: mediumblue;
+}
+
+td:last-child div.disabled {
+    color: lightskyblue;
+}
+div.disabled {
+    color: darkgray;
+}
+td.today_effect {
+    background-color: skyblue;
+    color: ver(--graph-line-color);
+}
+/*  */
+
+
+.board-month {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cal_btn {
+    width: 80px;
+}
+
+.right_btn {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}
+
+.cal_object {
+    width: 600px;
+}
+
+.calender-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 3px ver(--graph-line-color);
+}
+
+.B_month, .N_month {
+    cursor: pointer;
+    justify-content: center;
+    font-size: 1.5em;
+    width: 30px;
+    width: 30px;
+}
+
+.B_month:hover, .N_month:hover {
+    background: gold;
+}
+
+/* eigd of file */
+
